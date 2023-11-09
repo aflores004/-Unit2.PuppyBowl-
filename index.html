@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Puppy Players</title>
+    <style>
+      /* Add CSS styles for the card layout */
+      .player-card {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px;
+        display: inline-block;
+        width: 200px;
+      }
+      .player-img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+      #playerDetails {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="allPlayers"></div>
+    <div id="playerDetails">
+      <h2 id="playerName"></h2>
+      <p> <span id="playerBreed"></span></p>
+      <p> <span id="playerStatus"></span></p>
+      <img id="playerImg" src="" alt="Player Image" />
+      <button id="backButton">Back to Players</button>
+    </div>
+
+    <div id="addPlayerForm">
+      <h2>Add Player</h2>
+      <form id="addPlayerForm">
+        <!-- Form fields -->
+        <input type="text" id="name" name="name" placeholder="Name">
+        <input type="text" id="breed" name="breed" placeholder="Breed">
+        <input type="text" id="status" name="status" placeholder="Status">
+        <input type="text" id="imageUrl" name="imageUrl" placeholder="Image URL">
+      
+        <!-- Submit button -->
+        <button type="submit">Add Player</button>
+      </form>
+      
+      
+      <!-- Input for player ID to delete -->
+      <h2>Delete Player</h2>
+      <input type="text" id="deletePlayerId" placeholder="Enter Player ID">
+      <button onclick="deletePlayerById()">Delete Player</button>
+      
+
+    <div id="allPlayers"></div>
+    <div id="playerDetails" style="display: none"></div>
+    <div id="playerList" style="height: 300px; overflow: auto">
+      <div id="allPlayers"></div>
+    </div>
+    <div id="allPlayers"></div>
+
+    <script src="index.js" defer></script>
+    
+  </body>
+</html>
